@@ -6,8 +6,7 @@ from pathlib import Path
 
 app = FastAPI()
 
-# Путь к сохранённым артефактам (относительно корня репозитория)
-MODEL_DIR = Path(__file__).resolve().parents[2] / 'saved_models'
+MODEL_DIR = Path(__file__).resolve().parent / 'saved_models'
 model = joblib.load(MODEL_DIR / 'logreg.joblib')
 scaler = joblib.load(MODEL_DIR / 'logreg_scaler.joblib')
 

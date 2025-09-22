@@ -3,7 +3,6 @@ import requests
 
 st.title("Diabetes Prediction")
 
-# Ввод данных
 pregnancies = st.number_input("Pregnancies")
 glucose = st.number_input("Glucose")
 blood_pressure = st.number_input("Blood Pressure")
@@ -13,7 +12,6 @@ bmi = st.number_input("BMI")
 pedigree = st.number_input("Diabetes Pedigree Function")
 age = st.number_input("Age")
 
-# Кнопка для предсказания
 if st.button("Predict"):
     response = requests.post(
         "http://localhost:8000/predict/", 

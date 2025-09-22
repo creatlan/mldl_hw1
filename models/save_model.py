@@ -1,8 +1,8 @@
 import joblib
 from pathlib import Path
 
-# Save models to top-level 'models' directory (project root)
-MODELS_DIR = Path(__file__).resolve().parents[2] / 'models'
+# Save models to code/saved_models directory
+MODELS_DIR = Path(__file__).resolve().parents[1] / 'code' / 'saved_models'
 MODELS_DIR.mkdir(exist_ok=True)
 
 def save(model, scaler, name: str = 'logreg'):

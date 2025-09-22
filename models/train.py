@@ -1,7 +1,11 @@
+import sys
 from pathlib import Path
+
+sys.path.append(str(Path(__file__).parent.parent))
+
 from code.datasets.prepare_data import load_and_prepare
-from code.models.models import train_model, evaluate_model
-from code.models.save_model import save
+from models.models import train_model, evaluate_model
+from models.save_model import save
 
 
 def main():
