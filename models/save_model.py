@@ -1,7 +1,7 @@
+"""Model artifact persistence: save trained model and scaler."""
 import joblib
 from pathlib import Path
 
-# Save models to code/saved_models directory
 MODELS_DIR = Path(__file__).resolve().parents[1] / 'code' / 'saved_models'
 MODELS_DIR.mkdir(exist_ok=True)
 

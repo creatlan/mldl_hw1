@@ -1,3 +1,4 @@
+"""Training entrypoint: prepares data, trains the model, evaluates it, and saves artifacts."""
 import sys
 from pathlib import Path
 

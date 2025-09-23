@@ -1,3 +1,4 @@
+"""Model utilities: training and evaluating the classifier."""
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix
 from typing import Tuple

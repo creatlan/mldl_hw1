@@ -12,7 +12,7 @@ def load_and_prepare(path: str | Path = DATA_PATH, output_path: str | Path | Non
 
 	df = pd.read_csv(path)
 
-	cols_replace_zero = ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']  # colls where 0 is invalid
+	cols_replace_zero = ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']
 	for col in cols_replace_zero:
 		if col in df.columns:
 			median = df.loc[df[col] != 0, col].median()

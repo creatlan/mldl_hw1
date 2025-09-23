@@ -7,6 +7,7 @@ from pathlib import Path
 app = FastAPI()
 
 MODEL_DIR = Path(__file__).resolve().parent / 'saved_models'
+
 model = joblib.load(MODEL_DIR / 'logreg.joblib')
 scaler = joblib.load(MODEL_DIR / 'logreg_scaler.joblib')
 
